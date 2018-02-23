@@ -12,6 +12,8 @@
 
 <!---->
 <link rel="stylesheet" type="text/css" href="port.css">
+<link rel="stylesheet" type="text/css" href="srd.css">
+
 <script type="text/javascript">
   filterSelection("all") // Execute the function and show all columns
 function filterSelection(c) {
@@ -75,20 +77,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <i class="fa fa-remove"></i>
     </a>
     <img src="SAT.jpg" style="width:45%;" class="w3-round"><br><br>
-    <h4><b>PORTFOLIO</b></h4>
+    <h4><b href="#port">PORTFOLIO</b></h4>
   </div>
   <div class="w3-bar-block">
-    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> 
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>ABOUT</a> 
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>PORTFOLIO</a> 
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
   </div>
   <div class="w3-panel w3-large">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <a href="https://www.facebook.com/satyam.mishra.9212" target="_blank" ><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+  <!-- !PAGE CONTENT!
+  <i class="fa fa-linkedin w3-hover-opacity"></i> -->
   </div>
 </nav>
 
@@ -119,19 +118,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <div class="w3-grey">
       <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:95%">95%</div>
     </div>
-    <p>Machine Learning in Python, Matlab</p>
+    <p>Machine Learning in MATLAB and Data Science in Python</p>
     <div class="w3-grey">
       <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:85%">85%</div>
     </div>
-    <p>Front-end Web Developer</p>
+    <p>HTML, CSS AND JAVASCRIPT </p>
     <div class="w3-grey">
       <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:80%">80%</div>
     </div>
-    <p>
-      <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
-        <i class="fa fa-download w3-margin-right"></i>Download Resume
-      </button>
-    </p>
+    
     <hr>
   
 
@@ -139,81 +134,155 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   
   
 </div>
- <h2>PORTFOLIO</h2>
+ <h2 id="about">PORTFOLIO</h2>
 <div id="myBtnContainer">
+  
+  <button class="btn" onclick="filterSelection('nature')">Projects Completed</button>
+  <button class="btn" onclick="filterSelection('cars')"> Course Completed</button>
+  <button class="btn" onclick="filterSelection('people')"> Academic Qualifications</button>
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('nature')">Course Completed</button>
-  <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-  <button class="btn" onclick="filterSelection('people')"> People</button>
 </div>
 
 <!-- Portfolio Gallery Grid -->
 <div class="row">
   <div class="column nature">
     <div class="content">
-      <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera.s3.amazonaws.com/topics/ml/large-icon.png?auto=format%2Ccompress&dpr=1" alt="Mountains" style="width:100%">
-      <h4>Machine Learning - STANFORD UNIVERSITY</h4>
-      <p>Lorem ipsum dolor..</p>
+      <img src="3.png" style="width:100%; height: 50%; ">
+      <h4>Handwritten digit Recognition
+</h4>
+      <p> Implemented hand written digit classifier using M.L.  algorithms. Neural Networks, Logistic Regression and Backpropagation each separately on MNIST  handwritten digit dataset.
+</p>
     </div>
   </div>
   <div class="column nature">
     <div class="content">
-      <img src="https://www.edx.org/sites/default/files/course/image/promoted/mitx_6.00.1.x_378x225.jpg" alt="Lights" style="width:100%">
-      <h4>Lights</h4>
-      <p>Lorem ipsum dolor..</p>
+      <img src="2.png" alt="Lights" style="width:100%">
+      <h4>Email Spam Classifier
+</h4>
+      <p>Email Spam classifier can classify email into spam and non-spam using SVMs algorithm and 
+Spam ASSAIN Public corpus Dataset
+</p>
     </div>
   </div>
+<div class="column nature">
+    <div class="content">
+      <img src="ext.png" alt="Lights" style="width:100%">
+      <h4>Data Explorer with Python Libraries
+</h4>
+      <p>Data Explorer program can extract, clean, modify,  visualize raw large dataset available on the network.
+
+</p>
+    </div>
+  </div>
+
+<div class="column nature">
+    <div class="content">
+      <img src="http://webstyleguide.com/wsg2/site/graphics/3.19.gif" alt="Lights" style="width:100%">
+      <h4>News Site using Python Beautiful Soup and ML Clustering 
+</h4>
+      <p>News Site program surf  through selected websites using BS and  according to few sets of keywords and Clustering algorithm it cluster links and texts accordingly and then result is deployed on GitHub pages.
+
+</p>
+    </div>
+  </div>
+
+  
   <div class="column nature">
     <div class="content">
-      <img src="http://cse.iitkgp.ac.in/conf/HWCPRG/images/iitlogo.png" alt="Nature" style="width:100%">
-      <h4>Forest</h4>
-      <p>Lorem ipsum dolor..</p>
+      <img src="hang.png" alt="Nature" style="width:100%">
+      <h4> Computer vs Human Hangman Game in python.
+</h4>
+      <p>In Hangman Game 1, the Computer Selects a word at random from approx. 5K words and then Human guesses one character at time and according to availability human  is awarded.
+        <br>
+In Hangman Game 2, the Computer Selects a random alphabets and then Human guesses valid words from those random alphabets and according to availability human  is awarded.
+ 
+</p>
+    </div>
+  </div>
+
+<div class="column nature">
+    <div class="content">
+      <img src="predictor.png" alt="Lights" style="width:100%">
+      <h4> Linear Predictor using Regression
+</h4>
+      <p>Linear predictor  can predict  (based on data) things like:
+ 1.  The amount  of water flowing out of dam using  the change of water level in reservoir.<br>
+  1.  Profit for food truck in restaurant franchise considering different cities for opening a new outlet.
+
+</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="column cars">
+    <div class="content">
+      <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera.s3.amazonaws.com/topics/ml/large-icon.png" alt="Car" style="width:100%">
+      <h4>Machine Learning 
+</h4>
+      <p> Stanford University via Coursera</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png" alt="Car" style="width:50%; height:50%;">
+      <h4>Programming in C++ 
+ 
+</h4>
+      <p> IIT KGP via NPTEL</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <img src="https://www.edx.org/sites/default/files/course/image/promoted/mitx_6.00.1.x_378x225.jpg" alt="Car" style="width:100% ">
+      <h4>Intro. to CS and Programming Using Python 
+</h4>
+      <p>MIT via EDX</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <img src="ht.png" alt="Car" style="width:100%">
+      <h4>HTML, CSS and JAVASCRIPT for Web Developers 
+</h4>
+      <p>JHU via Coursera</p>
     </div>
   </div>
 
   <div class="column cars">
     <div class="content">
-      <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
-      <h4>Retro</h4>
-      <p>Lorem ipsum dolor..</p>
+      <img src="p.png" alt="Car" style="width:80%; height: 80%">
+      <h4>Using Python to Access Web Data 
+ 
+</h4>
+      <p>Michigan University via Coursera</p>
     </div>
   </div>
+
   <div class="column cars">
     <div class="content">
-      <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
-      <h4>Fast</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column cars">
-    <div class="content">
-      <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
-      <h4>Classic</h4>
-      <p>Lorem ipsum dolor..</p>
+      <img src="https://www.roke.co.uk/~/media/Images/C/Chemring-Roke/content-images/Data%20Science%202%20420x250.png?h=250&la=en&w=420" alt="Car" style="width:100%">
+      <h4>Data scientist track with python
+
+</h4>
+      <p>DATACAMP</p>
     </div>
   </div>
 
   <div class="column people">
     <div class="content">
-      <img src="/w3images/people1.jpg" alt="People" style="width:100%">
-      <h4>Girl</h4>
-      <p>Lorem ipsum dolor..</p>
+      <img src="https://www.ccsf.edu/content/ccsf/en/educational-programs/school-and-departments/school-of-science-and-mathematics/computer-science/_jcr_content/flath-department/image/file.res/flath-department.gif" alt="People" style="width:100%">
+      <h4>BCA-2nd year</h4>
+      <p>Bachelor of Computer Applications </p>
     </div>
   </div>
-  <div class="column people">
-    <div class="content">
-      <img src="/w3images/people2.jpg" alt="People" style="width:100%">
-      <h4>Man</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-  <div class="column people">
-    <div class="content">
-      <img src="/w3images/people3.jpg" alt="People" style="width:100%">
-      <h4>Woman</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
+  
+  
 <!-- END GRID -->
 <script>
 // Script to open and close sidebar
@@ -228,5 +297,31 @@ function w3_close() {
 }
 </script>
 
+
+<div class="container">
+  <img src="notebook.jpg" alt="Notebook" style="width:100%;">
+  <div class="content">
+    <h3>Enthusiastic about Machine Learning, Data Science and Full stack development</h3>
+  </div>
+
+
+<div class="w3-container w3-padding-large w3-grey">
+    <h4 id="contact"><b>Contact Me</b></h4>
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+        <p>7990satyam200@gmail.com</p>
+      </div>
+      <div class="w3-third w3-teal">
+        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+        <p>NOIDA, IN</p>
+      </div>
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+        <p>+91 8130889303</p>
+      </div>
+    </div>
+    
+  </div>
 </body>
 </html>

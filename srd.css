@@ -1,0 +1,6 @@
+.container {
+    position: relative; 
+    max-width: 800px; /* Maximum width */
+    margin: 10 auto; /* Center it */
+}
+
