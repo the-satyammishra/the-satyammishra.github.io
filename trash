@@ -1,0 +1,41 @@
+
+How to configure Samba server
+The following is the step by step procedure to configure a Samba Server
+1. Server IP address is xxx.xxx.0.254 and machine name is Server1
+2. Windows machine IP address is xxx.xxx.0.2 and machine name is client2 3. Firewall Should be disabled.
+#chkconfig iptables off #service iptables stop #chkconfig ip6tables off #service ip6tables stop
+ Network Configuration and Setting
+65
+i Network Administration With Linux
+4. To check if all rpms required for samba are installed or not.
+ #rpm –qa | grep samba, then it displays the following Samba-<version-name> Samba-common-<version-name> Samba-client-<version- name> System-config-samba-<version-name>
+5. If not, install it using #rpm –ivh samba
+6. Copy the original configuration file as smb.conf.bck
+#cp /etc/samba/smb.conf /etc/samba.conf.bck
+(This will keep a backup copy of your configuration file.)
+7. Now edit the configuration file #vi /etc/samba/smb.conf
+8. To share home directory edit this part of /etc/samba/smb.conf
+[homes]
+comment=Home directories browseable =no writable=yes
+9.To share printer edit this part of /etc/samba/smb.conf
+[printers]
+comment = All printers path = /var/spool/samba browseable = no
+10.To configure share called IHNCSHARE edit this part of /etc/samba/smb.conf
+[IHNC’s share]
+comment = Testing Samba Server path = /samba
+valid users = user1, user2
+11. Save the file with wq command
+12. To check your configuration file type testparm
+#testparm
+13. Create two samba users user1 and user2
+useradd user1 useradd user2
+14. Create smbpassword for both the users
+smbpasswd –a user1 smbpasswd –a user2
+ 66
+Netw
+on
+15. Now you stop/start the samba services
+ #service smb stop #service smb start
+16. To see what is shared from your server through samba for a particular user #smbclient -L Server1 –U user1 or smbclient –L //xxx.xxx.0.1 –U user1
+17. To see what is shared for a particular host #smbclient –L mac2
+18. Now, permanently make samba server on #chkconfig smb on
